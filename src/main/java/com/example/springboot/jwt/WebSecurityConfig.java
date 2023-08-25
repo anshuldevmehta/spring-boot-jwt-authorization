@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 @EnableGlobalMethodSecurity(
         prePostEnabled = true
 )
+//All users hard coded here.
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     public static final String AUTHORITIES_CLAIM_NAME = "roles";

@@ -91,6 +91,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .build();
         manager.createUser(user4);
 
+        UserDetails popat = User
+                .withUsername("popat")
+                .authorities("POPAT")
+                .passwordEncoder(passwordEncoder::encode)
+                .password("hogaya")
+                .build();
+        manager.createUser(popat);
+
         return manager;
     }
 
